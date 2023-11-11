@@ -1,0 +1,17 @@
+import socket
+import pyaudio
+import threading
+import tkinter as tk
+
+# Sender configuration
+SERVER_IP = '192.168.41.219'  # Server's IP address
+BASE_PORT = 12345             # Base port for sender
+
+# ... (rest of your code)
+
+# Set up sender socket with individual port
+sender_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sender_port = BASE_PORT + 1  # Choose a unique port for each sender
+sender_socket.bind(('0.0.0.0', sender_port))
+
+# ... (rest of your code)
